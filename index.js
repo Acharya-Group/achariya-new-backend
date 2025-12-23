@@ -13,7 +13,7 @@ app.use(cors({
   origin: [
     "https://achariyagroup.in",
     "http://localhost:3000",
-    "https://achariya-new-frontend.vercel.app/"
+    "https://achariya-new-frontend.vercel.app"
   ],
   credentials: true,
   allowedHeaders: ["Content-Type", "Authorization"],
@@ -22,7 +22,7 @@ app.use(cors({
 
 
 app.use((req, res, next) => {
-  // res.header("Access-Control-Allow-Origin", "https://achariyagroup.in");
+  res.header("Access-Control-Allow-Origin", "https://achariya-new-frontend.vercel.app");
   res.header("Access-Control-Allow-Credentials", "true");
   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
